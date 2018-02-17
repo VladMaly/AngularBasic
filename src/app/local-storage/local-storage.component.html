@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <h3 [innerHTML]="innerText">indexdbtest works!</h3>
+      <input type="text" [value]="inputSessional" (change)="inputChangeSessional($event)">
+    </div>
+    <div class="col-sm-6">
+      <h4>
+        The input field on the left will store the name for the session, while the input field will store it through multiple sessions,
+        yet the local storage seems to be limited to brwoser.
+      </h4>
+      <input type="text"  [value]="inputLocal" (change)="inputChangeLocal($event)">
+    </div>
+  </div>
+</div>

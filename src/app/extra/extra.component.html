@@ -1,0 +1,15 @@
+<div class="sep4">
+  <div class="link-nest">
+    <!-- <a routerLink="/input-form" routerLinkActive="active"
+     outlets='extraOutlet'>Input Form</a> -->
+    <div class="link" [routerLink]="[{ outlets: {extraOutlet: ['input-form']} }]"
+     routerLinkActive="active">Input Form</div>
+    <div class="link" [routerLink]="[{ outlets: {extraOutlet: ['input-group-form']} }]"
+     routerLinkActive="active">Group Form Setup</div>
+    <div class="link" [routerLink]="[{ outlets: {extraOutlet: ['other']} }]"
+     routerLinkActive="active">Other</div>
+  </div>
+  <router-outlet name="extraOutlet"></router-outlet>
+  <!-- <app-test-form></app-test-form>
+       <app-test-group-form></app-test-group-form> -->
+</div>

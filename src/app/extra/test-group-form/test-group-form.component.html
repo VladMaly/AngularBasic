@@ -1,0 +1,9 @@
+<div class="sep6">
+  <form [formGroup]="userForm" (ngSubmit)="onFormSubmit()">
+    Name: <input formControlName="name"  placeholder="Enter Name">
+    Age: <input formControlName="age"  placeholder="Enter Age">
+    City: <input formControlName="city"  placeholder="Enter City">
+    Country: <input formControlName="country" placeholder="Enter Country">
+         <button type="submit">Submit</button>
+ </form> 
+</div>

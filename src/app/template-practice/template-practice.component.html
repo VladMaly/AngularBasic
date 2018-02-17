@@ -1,0 +1,16 @@
+<h3 *ngIf="testSubject > 5;else templateName">Test {{testSubject}}</h3>
+<ng-template #templateName>
+    <h2>If isValid is false</h2>
+</ng-template>
+<div class="sep1">
+  <!-- Make user select a choice to change which componentOutlet gets generated.  -->
+  <h1 (click)="changeComp()">Import component in container using ngComponentOutlet(Click this text to change)</h1>
+  <ng-container *ngComponentOutlet="openTemplateComponent"></ng-container>
+</div>
+<div class="sep2">
+  <ng-container *ngTemplateOutlet="kingTemp"></ng-container>
+</div>
+<div class="sep3">
+  <h1>Different Component Below, takes template as input</h1>
+  <app-test-template [kingInput]="kingTemp"></app-test-template>
+</div>

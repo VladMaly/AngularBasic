@@ -1,0 +1,17 @@
+<div class="sep5">
+  <h3>Using FormControl </h3>
+  <div> 
+    <div>
+      Name: <input [formControl]="name">
+            <label *ngIf="name.invalid" class="error">
+               Name required with max 15 character. </label>
+    </div>
+    <div>
+      <button (click)="setNameValue()">Set value</button>
+      <button (click)="setResetName()">Reset</button>
+    </div> 
+  </div> 
+  <div>
+    <p>Name: <b>{{ name.value }}</b>, Validation Status: <b>{{ name.status }}</b></p>
+  </div> 
+</div>
